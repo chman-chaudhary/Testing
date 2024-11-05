@@ -46,6 +46,7 @@ const UserIDForm = () => {
       <InputFeild
         label={"Please enter your Password"}
         placeholder={"Password"}
+        type={"password"}
       />
     </div>
   );
@@ -63,7 +64,7 @@ const OTPForm = () => {
   );
 };
 
-const InputFeild = ({ label, placeholder, icon = null }) => {
+const InputFeild = ({ label, placeholder, type = "text", icon = null }) => {
   return (
     <div className="w-full flex flex-col gap-y-3">
       <label className="text-sm text-gray-800">
@@ -76,12 +77,14 @@ const InputFeild = ({ label, placeholder, icon = null }) => {
             <i className={`fa-solid fa-${icon}`}></i>
           </span>
           <input
+            type={type}
             className="w-full border-[0.5px] h-10 border-gray-400/70 p-2 focus:border-green-400/70 outline-none"
             placeholder={placeholder}
           />
         </div>
       ) : (
         <input
+          type={type}
           className="w-full border-[0.5px] border-gray-400/70 p-2 focus:border-green-400/70 outline-none"
           placeholder={placeholder}
         />
