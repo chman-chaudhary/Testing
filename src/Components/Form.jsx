@@ -9,10 +9,10 @@ export const Form = () => {
       <h3 className="text-2xl font-semibold">Login to your Account</h3>
       <form className="py-5 space-y-4">
         {loginWithOTP ? <OTPForm /> : <UserIDForm />}
-        <span className="flex gap-3 items-center my-5">
+        <label className="flex gap-3 items-center my-5">
           <input type="checkbox" className="size-4 accent-green-500" />{" "}
           <span className="text-gray-800">Remember me on this device</span>
-        </span>
+        </label>
         {!loginWithOTP && (
           <div className="flex justify-end items-center my-4">
             <span className="underline text-sm font-light hover:text-blue-500">
